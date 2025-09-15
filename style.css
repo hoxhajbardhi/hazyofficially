@@ -1,15 +1,88 @@
-.video-container {
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+}
+
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+    header h1 {
+        font-size: 3rem;
+        color: #ffffff;
+    }
+
+    header h2 {
+        font-size: 1.8rem;
+        color: #bbbbbb;
+    }
+
+    header p {
+        font-size: 1rem;
+        color: #999999;
+    }
+
+section {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+p {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #999999;
+}
+
+/* Responsive YouTube & Figma embeds */
+.video-container, .figma-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%; /* 16:9 */
     height: 0;
     overflow: hidden;
     margin-bottom: 20px;
 }
 
-    .video-container iframe {
+    .video-container iframe, .figma-container iframe {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        border: none;
     }
