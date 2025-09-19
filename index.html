@@ -1,82 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pamja - Hazy</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Njoha - Hazy (Official Release)</title>
+    <meta name="description" content="Njoha by Hazy - brand new release blending Balkan rhythms with modern sound. Discover the artist, lyrics, and watch the official video.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: #0f0f0f;
+            color: #f5f5f5;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            background: linear-gradient(135deg, #e63946, #6a11cb);
+            color: #fff;
+        }
+
+            header h1 {
+                font-size: 3rem;
+                font-weight: 800;
+            }
+
+            header h2 {
+                font-size: 1.5rem;
+                margin-top: .5rem;
+                font-weight: 600;
+            }
+
+            header p {
+                margin-top: .5rem;
+                font-size: 1rem;
+                opacity: .9;
+            }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: .8rem 2rem;
+            font-weight: 600;
+            background: #fff;
+            color: #111;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+            .btn:hover {
+                background: #f5f5f5;
+                transform: scale(1.05);
+            }
+
+        section {
+            padding: 3rem 1rem;
+            max-width: 1000px;
+            margin: auto;
+            animation: fadeInUp 1s ease forwards;
+            opacity: 0;
+        }
+
+            section h3 {
+                font-size: 2rem;
+                margin-bottom: 1.2rem;
+                color: #e63946;
+            }
+
+        ul {
+            margin-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: .5rem;
+        }
+
+        /* Video */
+        .video-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(230,57,70,0.5);
+        }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: .9rem;
+            background: #111;
+            color: #aaa;
+        }
+
+            footer a {
+                color: #e63946;
+                text-decoration: none;
+            }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Dark/Light toggle */
+        .toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: #fff;
+            color: #111;
+            border: none;
+            padding: .6rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+            z-index: 1000;
+        }
+
+        body.light {
+            background: #fafafa;
+            color: #111;
+        }
+
+            body.light header {
+                background: linear-gradient(135deg, #6a11cb, #2575fc);
+            }
+
+            body.light footer {
+                background: #f1f1f1;
+                color: #444;
+            }
+
+            body.light .btn {
+                background: #111;
+                color: #fff;
+            }
+
+            body.light .toggle {
+                background: #111;
+                color: #fff;
+            }
+    </style>
 </head>
 <body>
+    <button class="toggle">Light Mode</button>
+
     <header>
-        <h1>Pamja</h1>
+        <h1>Njoha</h1>
         <h2>by Hazy</h2>
-        <p>Released: July 23, 2025 | Genre: Balkan Pop</p>
+        <p>Released: September 19, 2025 | Genre: Balkan Pop</p>
+        <a href="#video" class="btn">Watch Now</a>
     </header>
 
     <main>
+        <section id="video">
+            <h3>Official Music Video</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/sXL4g6_DPl0?si=pGHQEL-xp_0dk8Jz" title="Njoha by Hazy (Official Video)" allowfullscreen></iframe>
+            </div>
+        </section>
+
         <section id="background">
-            <h3>Background & Context</h3>
+            <h3>About the Release</h3>
             <ul>
-                <li>Hazy is an Albanian artist blending traditional Balkan rhythms with modern electronic music.</li>
-                <li>Produced by MB Music; music video by MVC Production.</li>
-                <li>Premiered on July 23, 2025, with positive audience feedback.</li>
+                <li><strong>Breaking News:</strong> Hazy just dropped his brand new single <em>“Njoha”</em>, igniting the Balkan Pop scene.</li>
+                <li>The track fuses traditional Balkan melodies with modern electronic beats.</li>
+                <li>Produced by MB Music, visuals by MVC Production.</li>
+                <li>The strongest releases of 2025.</li>
             </ul>
         </section>
 
         <section id="artist-info">
-            <h3>Artist Biography / Informacion për Artistin</h3>
-            <p><strong>Albanian:</strong> HAZY është një producent dhe këngëtar që përzien Afro, R&B dhe Rap në një tingull karakteristik që është njëkohësisht global dhe thellësisht personal. Duke e filluar udhëtimin e tij muzikor vetëm në moshën 15 vjeç, HAZY shpejt bëri bujë në skenën shqiptare - duke bashkëpunuar me artistë të njohur dhe duke punuar në disa nga studiot më të mëdha të vendit.</p>
-            <p>Me një ndjenjë të fortë besnikërie ndaj muzikës dhe një qasje shumë selektive ndaj përmbajtjes, çdo këngë që HAZY publikon është krijuar me qëllim. Tingulli i tij lëviz përtej kufijve, duke reflektuar një mentalitet global, ndërsa qëndron i rrënjosur në autenticitet dhe emocion. HAZY nuk po bën vetëm muzikë - ai po ndërton një trashëgimi.</p>
-            <p><strong>English:</strong> HAZY is a producer and singer blending Afro, R&B, and Rap into a signature sound that is both global and deeply personal. Starting his musical journey at just 15 years old, HAZY quickly made waves in the Albanian scene – collaborating with well-known artists and working in some of the country's top studios.</p>
-            <p>With a strong sense of loyalty to music and a highly selective approach to content, every song HAZY releases is crafted with intention. His sound transcends borders, reflecting a global mindset while remaining rooted in authenticity and emotion. HAZY is not just making music – he is building a legacy.</p>
-        </section>
-
-        <!-- New section for YouTube embed -->
-        <section id="video">
-            <h3>Watch the Song</h3>
-            <div class="video-container">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/AID3hdJ_a_g" title="Pamja by Hazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <h3>Meet Hazy</h3>
+            <p><strong>Albanian:</strong> HAZY është një artist që përzien tingujt Afro, R&B dhe Rap me ritme ballkanike, duke sjellë një eksperiencë unike dhe globale. Me fillimet e tij që në moshë të hershme, ai tashmë po konsiderohet një nga artistët më premtues të rajonit.</p>
+            <p><strong>English:</strong> HAZY is a producer and singer blending Afro, R&B, and Rap with Balkan influences. Starting young, he’s now becoming one of the most promising artists of the region, known for authenticity and innovation.</p>
         </section>
 
         <section id="lyrics-theme">
-            <h3>Lyrics & Theme Analysis</h3>
+            <h3>Lyrics & Themes</h3>
             <ul>
-                <li>Themes: Love & Devotion, Emotional Turmoil, Hope & Belief.</li>
-                <li>
-                    Key Lyrics (summarized):
-                    <ul>
-                        <li>"I will hold you until my breath stops..."</li>
-                        <li>"Your eyes, the most beautiful view in the world..."</li>
-                        <li>"With me, you feel like you're on a cloud..."</li>
-                    </ul>
-                </li>
-                <li>Musical Elements: Guitar melodies, rhythmic beats complementing the emotional depth.</li>
+                <li>❤️ Love & Devotion</li>
+                <li>🌌 Emotional Intensity & Longing</li>
+                <li>🌍 A universal story of connection</li>
             </ul>
-        </section>
+         </section>
 
-        <section id="reception">
-            <h3>Reception & Impact</h3>
+        <section id="impact">
+            <h3>Impact & Buzz</h3>
             <ul>
-                <li>Immediate positive feedback from audiences.</li>
-                <li>Blends Balkan traditional music with modern sound.</li>
-                <li>Streaming data unavailable (recent release).</li>
+                <li>Instantly trending on social media.</li>
+                <li>Critics highlight the fusion of Balkan tradition with modern soundscapes.</li>
+                <li>Fans describe the song as “emotional, powerful, unforgettable.”</li>
             </ul>
         </section>
 
         <section id="conclusion">
-            <h3>Conclusion</h3>
-            <ul>
-                <li>Significance: Showcases Hazy's blend of traditional & contemporary music.</li>
-                <li>Takeaway: Emphasizes the enduring power of love and emotional journey of longing and hope.</li>
-            </ul>
+            <h3>Final Word</h3>
+            <p><strong>Njoha</strong> isn’t just another release—it’s a milestone in Hazy’s career. The song proves how Albanian music can transcend borders while keeping its roots alive.</p>
         </section>
     </main>
 
     <footer>
-        <p>Presentation created by <a href="https://bardh.dev" target="_blank">F.Hoxhaj</a></p>
+        <p>Presentation created by <a href="https://bardh.dev" target="_blank"><b>bardh.dev</b></a></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Fade-in effect
+        const sections = document.querySelectorAll("section");
+        const options = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, options);
+        sections.forEach(sec => observer.observe(sec));
+
+        // Dark/Light mode toggle
+        const toggleBtn = document.querySelector('.toggle');
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light');
+            toggleBtn.textContent = document.body.classList.contains('light') ? 'Dark Mode' : 'Light Mode';
+        });
+    </script>
 </body>
 </html>
